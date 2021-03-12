@@ -9,7 +9,7 @@
 
 
 import React, { Component } from 'react';
-import {Translate} from '../../utils/NlsHelper';
+import {Translate} from '../../utils/NlsHelper.js';
 import './Pagination.css';
 import '../../public/css/style.css';
 

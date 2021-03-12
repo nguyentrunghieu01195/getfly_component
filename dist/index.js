@@ -48117,4 +48117,4 @@ exports.Row = Row;
 exports.Switch = Switch;
 exports.TabContent = TabContent;
 exports.TabPane = TabPane;
-//# sourceMappingURL=index.tsx.map
+//# sourceMappingURL=index.js.map

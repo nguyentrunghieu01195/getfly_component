@@ -9,7 +9,7 @@
 
 
 import React, { Component } from 'react';
-import {Translate} from '../../utils/NlsHelper';
+import {Translate} from '../../utils/NlsHelper.js';
 // import IMG_NO_DATA from './image/empty_data.png';
 // import IMG_NO_ORDER from './image/empty_order.png';
 // import IMG_NO_TASK from './image/empty_task.png';
