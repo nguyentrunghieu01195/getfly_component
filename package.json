@@ -1,11 +1,11 @@
 {
-  "name": "component_design",
+  "name": "getfly_component",
   "version": "1.0.0",
-  "description": "A template test",
-  "author": "nguyentrunghieu01195",
+  "description": "Getfly component",
+  "author": "Nguyen Trung Hieu <nguyentrunghieu01195@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/nguyentrunghieu01195/component_design.git"
+    "url": "git+ssh://git@github.com:nguyentrunghieu01195/getfly_component.git"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
@@ -67,10 +67,10 @@
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-typescript2": "^0.30.0"
   },
-  "main": "./build/index.js",
-  "module": "./build/index.es.js",
+  "main": "./dist/index.tsx",
+  "module": "./dist/index.es.js",
   "bugs": {
-    "url": "https://github.com/nguyentrunghieu01195/component_design/issues"
+    "url": "https://github.com/nguyentrunghieu01195/getfly_component/issues"
   },
-  "homepage": "https://github.com/nguyentrunghieu01195/component_design#readme"
+  "homepage": "https://github.com/nguyentrunghieu01195/getfly_component#readme"
 }
