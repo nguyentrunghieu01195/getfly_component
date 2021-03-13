@@ -1,6 +1,6 @@
 {
   "name": "getfly_component_new",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Getfly component",
   "author": "Nguyen Trung Hieu <nguyentrunghieu01195@gmail.com>",
   "repository": {
@@ -65,7 +65,10 @@
     "@storybook/react": "^6.1.20",
     "rollup": "^2.41.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
-    "rollup-plugin-typescript2": "^0.30.0"
+    "rollup-plugin-typescript2": "^0.30.0",
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/preset-env": "^7.1.6"
   },
   "main": "./dist/index.js",
   "module": "./dist/index.es.js",
