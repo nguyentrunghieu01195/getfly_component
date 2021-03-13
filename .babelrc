@@ -1,15 +1,11 @@
 {
-	"presets": [
+	"presets": ["@babel/preset-env", "@babel/preset-react"],
+	"plugins": [
 	  [
-		"@babel/preset-env",
+		"@babel/plugin-proposal-class-properties",
 		{
-		  "targets": {
-			"node": "8.10"
-		  }
+		  "loose": true
 		}
 	  ]
-	],
-	"plugins": [
-	  "@babel/plugin-proposal-class-properties"
 	]
   }
