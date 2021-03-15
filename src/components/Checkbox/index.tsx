@@ -9,7 +9,7 @@
 
 
 import React, { Component } from 'react';
-import './Checkbox.css';
+import 'components/Checkbox/Checkbox.css';
 
 export interface PropsCheckbox {
 	id: string,

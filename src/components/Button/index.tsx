@@ -9,7 +9,7 @@
 
 
 import React, { Component } from 'react';
-import './Button.css';
+import 'components/Button/Button.css';
 
 export interface PropsButton {
 	innerText?: string,

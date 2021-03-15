@@ -9,8 +9,8 @@
 
 
 import React, { Component } from 'react';
-import {Dropdown, Button} from '../../components';
-import './ColorClass.css';
+import {Dropdown, Button} from 'components';
+import 'components/Color/ColorClass.css';
 
 interface Color {
 	color: string,

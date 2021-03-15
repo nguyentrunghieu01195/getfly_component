@@ -9,16 +9,15 @@
 
 
 import React, { Component } from 'react';
-import {Translate} from '../../utils/NlsHelper.js';
-// import IMG_NO_DATA from './image/empty_data.png';
-// import IMG_NO_ORDER from './image/empty_order.png';
-// import IMG_NO_TASK from './image/empty_task.png';
-// import IMG_NO_CUSTOMER from './image/empty_customer.png';
-// import IMG_NO_VOUCHER from './image/empty_voucher.png';
-// import IMG_NO_PRODUCT from './image/empty_product.png';
-// import IMG_NO_FUND from './image/empty_fund.png';
-import Row from '../Layout/Row';
-import Col from '../Layout/Column';
+import {Translate} from 'utils/NlsHelper.js';
+import IMG_NO_DATA from 'components/EmptyState/image/empty_data.png';
+import IMG_NO_ORDER from 'components/EmptyState/image/empty_order.png';
+import IMG_NO_TASK from 'components/EmptyState/image/empty_task.png';
+import IMG_NO_CUSTOMER from 'components/EmptyState/image/empty_customer.png';
+import IMG_NO_VOUCHER from 'components/EmptyState/image/empty_voucher.png';
+import IMG_NO_PRODUCT from 'components/EmptyState/image/empty_product.png';
+import IMG_NO_FUND from 'components/EmptyState/image/empty_fund.png';
+import {Row, Col} from 'components';
 
 export interface PropsEmptyState {
 	type?: 'data' | 'order' | 'task' | 'customer' | 'voucher' | 'product' | 'fund',
@@ -47,19 +46,19 @@ class EmptyState extends Component<PropsEmptyState>{
 
 		switch(type){
 			case 'data':
-				return this.renderEmptyState(require('./image/empty_data.png'), text ? text : t('no_data'));
+				return this.renderEmptyState(IMG_NO_DATA, text ? text : t('no_data'));
 			case 'order':
-				return this.renderEmptyState(require('./image/empty_order.png'), text ? text : t('no_orders_found'));
+				return this.renderEmptyState(IMG_NO_ORDER, text ? text : t('no_orders_found'));
 			case 'task':
-				return this.renderEmptyState(require('./image/empty_task.png'), text ? text : t('no_tasks_found'));
+				return this.renderEmptyState(IMG_NO_TASK, text ? text : t('no_tasks_found'));
 			case 'customer':
-				return this.renderEmptyState(require('./image/empty_customer.png'), text ? text : t('no_customers_found'));
+				return this.renderEmptyState(IMG_NO_CUSTOMER, text ? text : t('no_customers_found'));
 			case 'voucher':
-				return this.renderEmptyState(require('./image/empty_voucher.png'), text ? text : t('no_data'));
+				return this.renderEmptyState(IMG_NO_VOUCHER, text ? text : t('no_data'));
 			case 'product':
-				return this.renderEmptyState(require('./image/empty_product.png'), text ? text : t('no_products_found'));
+				return this.renderEmptyState(IMG_NO_PRODUCT, text ? text : t('no_products_found'));
 			case 'fund':
-				return this.renderEmptyState(require('./image/empty_fund.png'), text ? text : t('no_funds_found'));
+				return this.renderEmptyState(IMG_NO_FUND, text ? text : t('no_funds_found'));
 			default:
 				return(<></>)
 		}

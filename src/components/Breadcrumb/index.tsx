@@ -9,7 +9,7 @@
 
 
 import React, { Component } from 'react';
-import './Breadcrumb.css';
+import 'components/Breadcrumb/Breadcrumb.css';
 
 interface Row {
 	text: string,

@@ -9,7 +9,7 @@
 
 
 import React, { Component } from 'react';
-import './Shadow.css';
+import 'components/Shadow/Shadow.css';
 
 export interface PropsShadow {
 	type?: 'shadow1' | 'shadow2' | 'shadow3' | 'shadow4' | 'shadow5' | 'shadow6'

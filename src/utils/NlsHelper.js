@@ -26,7 +26,7 @@ class Translate {
 	}
 
 	getTranslate = (key = '', values = {}) => {
-		let nls = require(`../nls/${this.locale}.json`);
+		let nls = require(`nls/${this.locale}.json`);
 	
 		let string = nls && nls[key] ? nls[key] : key;
 		return replateString(string, values);

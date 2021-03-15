@@ -9,10 +9,10 @@
 
 
 import React, { Component } from 'react';
-import IMAGE_LOADING_1 from './image/loading1.gif';
-import IMAGE_LOADING_2 from './image/loading2.gif';
-import IMAGE_LOADING_3 from './image/loading3.gif';
-import './Loading.css';
+import IMAGE_LOADING_1 from 'components/Loading/image/loading1.gif';
+import IMAGE_LOADING_2 from 'components/Loading/image/loading2.gif';
+import IMAGE_LOADING_3 from 'components/Loading/image/loading3.gif';
+import 'components/Loading/Loading.css';
 
 export interface PropsLoading {
 	type?: 'logo' | 'dot_spin' | 'line_spin',
@@ -26,16 +26,16 @@ class Loading extends Component<PropsLoading>{
 		let img = '';
 		switch(type){
 			case 'logo':
-				img = require('./image/loading1.gif');
+				img = IMAGE_LOADING_1;
 				break;
 			case 'dot_spin':
-				img = require('./image/loading2.gif');
+				img = IMAGE_LOADING_2;
 				break;
 			case 'line_spin':
-				img = require('./image/loading3.gif');
+				img = IMAGE_LOADING_3;
 				break;
 			default:
-				img = require('./image/loading1.gif');
+				img = IMAGE_LOADING_1;
 				break;
 		}
 

@@ -9,7 +9,7 @@
 
 
 import React, { Component } from 'react';
-import './Typography.css';
+import 'components/Typography/Typography.css';
 
 export interface PropsTypography {
 	text?: string,

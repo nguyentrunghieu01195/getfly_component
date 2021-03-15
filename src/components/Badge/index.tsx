@@ -9,7 +9,7 @@
 
 
 import React, { Component } from 'react';
-import './Badge.css';
+import 'components/Badge/Badge.css';
 
 export interface PropsBadge {
 	type?: 'top' | 'in',

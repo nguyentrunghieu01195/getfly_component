@@ -23,7 +23,8 @@
     "paths": {
       "components/*": ["components/*"],
       "utils/*": ["utils/*"],
-      "nls/*": ["nls/*"]
+      "nls/*": ["nls/*"],
+      "public/*": ["public/*"]
     }
   },
   "include": [

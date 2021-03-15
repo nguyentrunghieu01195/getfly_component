@@ -9,13 +9,11 @@
 
 
 import React, { Component } from 'react';
-import {Translate} from '../../utils/NlsHelper.js';
-import IMG_PAGE_NOT_FOUND from './image/empty_404.png';
-import IMG_PAGE_NOT_FOUND_2 from './image/empty_404_2.png';
-import IMG_PAGE_NOT_FOUND_3 from './image/empty_404_3.png';
-import Row from '../Layout/Row';
-import Col from '../Layout/Column';
-import Button from '../Button';
+import {Translate} from 'utils/NlsHelper.js';
+import IMG_PAGE_NOT_FOUND from 'components/Error/image/empty_404.png';
+import IMG_PAGE_NOT_FOUND_2 from 'components/Error/image/empty_404_2.png';
+import IMG_PAGE_NOT_FOUND_3 from 'components/Error/image/empty_404_3.png';
+import {Row, Col, Button} from 'components';
 
 export interface PropsError {
 	type?: 'not_found' | 'access_denied',
@@ -34,16 +32,16 @@ class Error extends Component<PropsError>{
 		let img = '';
 		switch(img_type){
 			case 1:
-				img = require('./image/empty_404.png');
+				img = IMG_PAGE_NOT_FOUND;
 				break;
 			case 2:
-				img = require('./image/empty_404_2.png');
+				img = IMG_PAGE_NOT_FOUND_2;
 				break;
 			case 3:
-				img = require('./image/empty_404_3.png');
+				img = IMG_PAGE_NOT_FOUND_3;
 				break;
 			default:
-				return img = require('./image/empty_404.png');
+				return img = IMG_PAGE_NOT_FOUND;
 		}
 
 		switch(type){

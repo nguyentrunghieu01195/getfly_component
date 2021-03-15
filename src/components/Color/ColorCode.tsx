@@ -10,8 +10,8 @@
 
 import React, { Component } from 'react';
 import { Overlay, Popover } from 'react-bootstrap';
-import {Button} from '../index';
-import './ColorCode.css';
+import {Button} from 'components';
+import 'components/Color/ColorCode.css';
 
 export interface PropsColorCode {
 	colorSelected?: string,

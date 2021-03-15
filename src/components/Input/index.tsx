@@ -9,7 +9,7 @@
 
 
 import React, { Component } from 'react';
-import './Input.css';
+import 'components/Input/Input.css';
 
 export interface PropsInput {
 	type?: 'text' | 'number' | 'password' | 'color' | 'hidden' | 'range' | 'time' | 'date' | 'datetime-local' | 'week' | 'month' | 'textarea',

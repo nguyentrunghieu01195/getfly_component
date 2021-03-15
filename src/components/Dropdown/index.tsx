@@ -9,7 +9,7 @@
 
 
 import React, { Component } from 'react';
-import {Button, ButtonGroup} from '../index';
+import {Button, ButtonGroup} from 'components';
 
 export interface PropsDropdown {
 	id?: string,

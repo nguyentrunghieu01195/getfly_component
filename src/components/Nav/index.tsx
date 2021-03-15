@@ -10,10 +10,10 @@
 
 
 import React, { Component } from 'react';
-import {changeTabActive, changeDropdownActive, changeTabPane} from '../../utils/NavHelper';
-import TabContent from './TabContent';
-import TabPane from './TabPane';
-import './Nav.css';
+import {changeTabActive, changeDropdownActive, changeTabPane} from 'utils/NavHelper';
+import TabContent from 'components/Nav/TabContent';
+import TabPane from 'components/Nav/TabPane';
+import 'components/Nav/Nav.css';
 
 export {TabContent, TabPane};
 

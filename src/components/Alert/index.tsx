@@ -10,7 +10,7 @@
 
 
 import React, { Component } from 'react';
-import './Alert.css';
+import 'components/Alert/Alert.css';
 
 export interface PropsAlert {
 	show: boolean,

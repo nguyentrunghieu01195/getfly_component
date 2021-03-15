@@ -9,7 +9,7 @@
 
 
 import React, { Component } from 'react';
-import './Radio.css';
+import 'components/Radio/Radio.css';
 
 export interface PropsRadio {
 	id: string,

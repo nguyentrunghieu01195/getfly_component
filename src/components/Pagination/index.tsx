@@ -9,9 +9,9 @@
 
 
 import React, { Component } from 'react';
-import {Translate} from '../../utils/NlsHelper.js';
-import './Pagination.css';
-import '../../public/css/style.css';
+import {Translate} from 'utils/NlsHelper.js';
+import 'components/Pagination/Pagination.css';
+import 'public/css/style.css';
 
 export interface PropsPagination {
 	onPrev?: (e: number) => void,

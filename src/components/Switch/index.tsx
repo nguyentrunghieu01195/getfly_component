@@ -9,8 +9,8 @@
 
 
 import React, { Component } from 'react';
-import Button from '../Button';
-import './Switch.css';
+import {Button} from 'components';
+import 'components/Switch/Switch.css';
 
 export interface PropsSwitch {
 	active?: boolean,
