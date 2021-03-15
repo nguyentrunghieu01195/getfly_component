@@ -14,6 +14,7 @@
  import typescript from "rollup-plugin-typescript2";
  import postcss from "rollup-plugin-postcss";
  import image from 'rollup-plugin-image';
+ import babel from 'rollup-plugin-babel';
  
  import packageJson from "./package.json";
  
@@ -32,5 +33,15 @@
 		sourcemap: true
 		}
 	],
-	plugins: [peerDepsExternal(), resolve(), commonjs(), typescript(), postcss(), image()]
+	plugins: [
+		peerDepsExternal(),
+		resolve(),
+		commonjs(),
+		typescript(),
+		postcss(),
+		image(),
+		babel({
+			exclude: 'node_modules/**'
+		})
+	]
 };

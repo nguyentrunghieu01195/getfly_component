@@ -1,6 +1,6 @@
 {
   "name": "getfly_component_new",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Getfly component",
   "author": "Nguyen Trung Hieu <nguyentrunghieu01195@gmail.com>",
   "repository": {
@@ -24,6 +24,7 @@
     "react-bootstrap": "^1.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.3",
+    "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-image": "^1.0.2",
     "rollup-plugin-postcss": "^4.0.0",
     "typescript": "^4.1.2",
@@ -32,8 +33,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "rollup -c",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
   },

@@ -36755,32 +36755,35 @@ var Dropdown = /** @class */ (function (_super) {
  * -----
  * Change Log: <press Ctrl + alt + c write chanelog>
  */
-
 const replateString = (string, values = {}) => {
-	try{
-		let array_keys = Object.keys(values);
-		array_keys.map(key => {return string = string.replaceAll("${{"+key+"}}", values[key])});
-
-		return string;
-	} catch {
-		return string;
-	}
+  try {
+    let array_keys = Object.keys(values);
+    array_keys.map(key => {
+      return string = string.replaceAll("${{" + key + "}}", values[key]);
+    });
+    return string;
+  } catch {
+    return string;
+  }
 };
 
 class Translate {
-	static locale = '';
+  constructor() {
+    this.setLocale = (locale = 'vi') => {
+      this.locale = locale;
+    };
 
-	setLocale = (locale = 'vi') => {
-		this.locale = locale;
-	}
+    this.getTranslate = (key = '', values = {}) => {
+      let nls = require(`../nls/${this.locale}.json`);
 
-	getTranslate = (key = '', values = {}) => {
-		let nls = require(`../nls/${this.locale}.json`);
-	
-		let string = nls && nls[key] ? nls[key] : key;
-		return replateString(string, values);
-	};
+      let string = nls && nls[key] ? nls[key] : key;
+      return replateString(string, values);
+    };
+  }
+
 }
+
+Translate.locale = '';
 
 var Row = /** @class */ (function (_super) {
     __extends(Row, _super);
@@ -36946,48 +36949,48 @@ var Loading = /** @class */ (function (_super) {
  * -----
  * Change Log: <press Ctrl + alt + c write chanelog>
  */
-
 const changeTabActive = info => {
-	document.getElementsByClassName('tab-child').forEach((m, idx) => {
-		m.classList.remove('active');
-		if(m.getAttribute('href') === '#'+info.tab_id){
-			m.classList.add('active');
-		}
-	});
+  document.getElementsByClassName('tab-child').forEach((m, idx) => {
+    m.classList.remove('active');
 
-	document.getElementsByClassName('nav-link').forEach((m, idx) => {
-		m.classList.remove('active');
-		if(m.getAttribute('href') === '#'+info.tab_id){
-			m.classList.add('active');
-		}
-	});
+    if (m.getAttribute('href') === '#' + info.tab_id) {
+      m.classList.add('active');
+    }
+  });
+  document.getElementsByClassName('nav-link').forEach((m, idx) => {
+    m.classList.remove('active');
+
+    if (m.getAttribute('href') === '#' + info.tab_id) {
+      m.classList.add('active');
+    }
+  });
 };
 
 const changeDropdownActive = info => {
-	document.getElementById(`${info.id_ul}`) && document.getElementById(`${info.id_ul}`).getElementsByClassName(`nav-link`).forEach((m, idx) => {
-		m.classList.remove('active');
-	});
-	document.getElementById(info.parent).classList.add('active');
-	document.getElementsByClassName('dropdown-item').forEach((m, idx) => {
-		m.classList.remove('active');
-		if(m.getAttribute('href') === '#'+info.tab_id) {
-			m.classList.add('active');
-		}
-	});
+  document.getElementById(`${info.id_ul}`) && document.getElementById(`${info.id_ul}`).getElementsByClassName(`nav-link`).forEach((m, idx) => {
+    m.classList.remove('active');
+  });
+  document.getElementById(info.parent).classList.add('active');
+  document.getElementsByClassName('dropdown-item').forEach((m, idx) => {
+    m.classList.remove('active');
+
+    if (m.getAttribute('href') === '#' + info.tab_id) {
+      m.classList.add('active');
+    }
+  });
 };
 
 const changeTabPane = (id_content, tab_id) => {
-	let tab_target = document.getElementById(id_content);
-	if(!tab_target) return;
-	tab_target.getElementsByClassName('tab-pane').forEach((m, idx) => {
-		m.classList.remove('active');
-		m.classList.remove('show');
-	});
-	
-	let tab_selected = document.querySelector(`#${id_content} #${tab_id}`);
-	if(!tab_selected) return;
-	tab_selected.classList.add('active');
-	tab_selected.classList.add('show');
+  let tab_target = document.getElementById(id_content);
+  if (!tab_target) return;
+  tab_target.getElementsByClassName('tab-pane').forEach((m, idx) => {
+    m.classList.remove('active');
+    m.classList.remove('show');
+  });
+  let tab_selected = document.querySelector(`#${id_content} #${tab_id}`);
+  if (!tab_selected) return;
+  tab_selected.classList.add('active');
+  tab_selected.classList.add('show');
 };
 
 var TabContent = /** @class */ (function (_super) {
